@@ -3,8 +3,7 @@ import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import styled from 'styled-components'
-import { BottomNavigation } from '@material-ui/core'
-import { Add, NoEncryption, Remove } from '@material-ui/icons'
+import { Add, Remove } from '@material-ui/icons'
 import { mobile } from "../responsive";
 
 const Container = styled.div`
