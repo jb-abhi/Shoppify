@@ -140,7 +140,7 @@ const Product = () => {
 
   const cartHandler = () => {
     dispatch(   
-      addProduct({product,qty})
+      addProduct({...product,qty,color,size})
     )
   }
 
@@ -157,7 +157,7 @@ const Product = () => {
           <Desc>
           {product.desc}
           </Desc>
-          <Price>$ {product.price}</Price>
+          <Price>₹ {product.price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>

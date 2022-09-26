@@ -11,6 +11,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import CheckoutSuccess from "./components/CheckoutSuccess";
 
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
         <Route path="/cart" element={<Cart/>} />
         <Route path="/login" element={user ? <Navigate replace to="/"  /> : (<Login/>)  }></Route> 
         <Route path="/register" element={user ? <Navigate replace to="/"  /> : (<Register/>)  }></Route>
+        <Route path="/checkout-success" element={<CheckoutSuccess/>} />
+        {/* <Route path="*" element={<CheckoutSuccess/>} /> */}
       </Routes>
     </BrowserRouter>
   );
