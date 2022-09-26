@@ -146,11 +146,6 @@ const Button = styled.button`
 const Cart = () => {
 
   const cart = useSelector((state) => state.cart);
-  const [stripeToken, setStripeToken] = useState(null);
-
-  const onToken = (token) => {
-    setStripeToken(token);
-  };
 
   return (
     <Container>
@@ -218,18 +213,6 @@ const Cart = () => {
               <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>₹ {cart.total}</SummaryItemPrice>
             </SummaryItem>
-            {/* <StripeCheckout
-              name="Shoppify"
-              image="https://i.pcmag.com/imagery/reviews/02lLbDwVdtIQN2uDFnHeN41-11..v1569480019.jpg"
-              billingAddress
-              shippingAddress
-              description={`Your total is ${cart.total}`}
-              amount={cart.total * 100}
-              token={onToken}
-              stripeKey={KEY}
-            >
-              <Button>CHECKOUT NOW</Button>
-            </StripeCheckout> */}
             <PayButton cartItem = {cart.products}></PayButton>
           </Summary>
         </Bottom>
